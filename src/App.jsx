@@ -8,13 +8,14 @@ import rebarStockYardImg from './assets/shop/rebar-stock-yard.jpeg'
 import roofingSheetsStockImg from './assets/shop/roofing-sheets-stock.jpeg'
 import meshRollsCorridorImg from './assets/shop/mesh-rolls-corridor.jpeg'
 import fencingSuppliesDisplayImg from './assets/shop/fencing-supplies-display.jpeg'
-import blueFencingStockroomImg from './assets/shop/blue-fencing-stockroom.jpeg'
-import ownerDeskMediumImg from './assets/shop/owner-desk-medium.jpeg'
 import pvcPipeCoilsSanitaryDisplayImg from './assets/shop/pvc-pipe-coils-sanitary-display.jpeg'
 import steelSectionsYardImg from './assets/shop/steel-sections-yard.jpeg'
 import fencingShowroomFrontImg from './assets/shop/fencing-showroom-front.jpeg'
 import storefrontExteriorImg from './assets/shop/storefront-exterior.jpeg'
+import storefrontExteriorImg1 from './assets/shop/storefront-exterior1.jpeg'
 import paintAisleShelvesImg from './assets/shop/paint-aisle-shelves.jpeg'
+import ownerPotrait from './assets/shop/owner-potrait.jpeg'
+import ownerDeskMediumImg from './assets/shop/owner-desk-medium.jpeg'
 
 const contact = {
   business: 'M/s Purushottam Das Ashish Kumar Gupta',
@@ -125,7 +126,7 @@ const advantages = [
 
 const galleryImages = [
   {
-    image: storefrontExteriorImg,
+    image: storefrontExteriorImg1,
     title: 'Storefront presence',
     caption: 'A bold frontage on Jaitpur Road that makes the business easy to identify and visit.',
   },
@@ -397,7 +398,7 @@ function App() {
               </div>
               <div className="min-h-[320px]">
                 <img
-                  src={ownerDeskWideImg}
+                  src={ownerPotrait}
                   alt="Ashish Bhawan desk and stocked interior"
                   className="h-full w-full object-cover"
                 />
@@ -525,18 +526,11 @@ function App() {
                   className="h-72 w-full object-cover"
                 />
               </div>
-              <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
-                <img
-                  src={blueFencingStockroomImg}
-                  alt="Coils and construction stock in storage"
-                  className="h-full min-h-72 w-full object-cover"
-                />
-              </div>
-              <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
+              <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 md:col-span-2">
                 <img
                   src={ownerDeskMediumImg}
-                  alt="Store desk and stocked shelves"
-                  className="h-full min-h-72 w-full object-cover"
+                  alt="Owner seated at the store desk"
+                  className="h-80 w-full object-cover object-top md:h-[26rem]"
                 />
               </div>
             </div>
