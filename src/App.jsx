@@ -18,6 +18,7 @@ import paintAisleShelvesImg from './assets/shop/paint-aisle-shelves.jpeg'
 
 const contact = {
   business: 'M/s Purushottam Das Ashish Kumar Gupta',
+  brand: 'Ashish Bhawan',
   addressLines: [
     'Ashish Bhawan',
     'Jaitpur Road, Burhar',
@@ -27,6 +28,26 @@ const contact = {
   phoneHref: 'tel:+919424253859',
   mapsHref:
     'https://maps.app.goo.gl/88Pt8fEf4f6Z9fU69',
+}
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HardwareStore',
+  name: contact.brand,
+  legalName: contact.business,
+  url: 'https://ashishbhawan.vercel.app/',
+  image: 'https://ashishbhawan.vercel.app/favicon.svg',
+  telephone: '+91 94242 53859',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Jaitpur Road',
+    addressLocality: 'Burhar',
+    addressRegion: 'Madhya Pradesh',
+    postalCode: '484110',
+    addressCountry: 'IN',
+  },
+  areaServed: ['Burhar', 'Shahdol'],
+  sameAs: [contact.mapsHref],
 }
 
 const navItems = [
@@ -163,6 +184,10 @@ function SectionHeading({ eyebrow, title, description, align = 'left' }) {
 function App() {
   return (
     <div className="min-h-screen bg-[#0a0f14] text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       <div className="pointer-events-none fixed inset-0 opacity-50">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(245,158,11,0.18),_transparent_30%),radial-gradient(circle_at_top_right,_rgba(14,165,233,0.16),_transparent_28%),linear-gradient(180deg,_rgba(10,15,20,0.25),_#0a0f14_75%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:96px_96px]" />
@@ -211,7 +236,7 @@ function App() {
                 Premium local hardware destination
               </div>
               <h1 className="mt-6 max-w-4xl text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
-                A modern hardware website for a business that supplies the real backbone of construction.
+                Hardware, building materials and construction supplies for Burhar and the wider Shahdol district.
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
                 Ashish Bhawan brings together hardware, steel, fencing, paint, sanitaryware and utility supplies in one dependable location for Burhar and the wider Shahdol district.
